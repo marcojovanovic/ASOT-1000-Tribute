@@ -21,7 +21,7 @@ function LandingPage() {
         transition={{ duration: 2 }}
         className="landing-center"
       >
-        A State <span className="landing-span">of</span> Trance{' '}
+        A State <span className="landing-span">of</span> Trance
         <span>
           <img className="landing-img" src={zero} alt="" />
         </span>
