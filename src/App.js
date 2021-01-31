@@ -1,11 +1,8 @@
-import React from 'react';
+import React ,{Suspense, lazy} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import AsotApp from './ASOT1000/AsotApp';
-import LandingPage from './ASOT1000/LandingPage';
-
-
-
+const Landing = lazy(() => import('./ASOT1000/LandingPage'));
 
 
 function App() {
@@ -14,7 +11,9 @@ function App() {
      <Router>
        <Switch>
          <Route exact path='/'>
-             <LandingPage />
+         <Suspense fallback={<div>Loading...</div>}>
+            <Landing />
+          </Suspense>
          </Route>
          <Route exact path='/asot'>
              <AsotApp />

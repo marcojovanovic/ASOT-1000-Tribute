@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import zero from './images/1000.png';
-import './landingPage.css';
+import './css/landingPage.css';
 import { motion } from 'framer-motion';
 import { animationThree, transition } from './framerAnimations';
 
