@@ -6,6 +6,7 @@ import LogoAsot from './images/logoAsot.png';
 import './css/main.css';
 import './css/animations.css';
 import './css/slider.css';
+import { FiPlay } from 'react-icons/fi';
 
 import { audioList1 } from './data.js';
 
@@ -85,10 +86,10 @@ const options = {
    * [ type `Boolean` default 'false' ]
    * The default audioPlay handle function will be played again after each pause, If you only want to trigger it once, you can set 'true'
    */
-  once: false,
+  once: true,
 
   // Da li na pocetku da na load da se automatski pusti prva numera [type `Boolean` default 'true']
-  autoPlay: false,
+  autoPlay: true,
 
   //Da li mozez na klik da menjas izmedju 2 moda, full => mini  or mini => full   [type 'Boolean' default 'true']
   toggleMode: true,
@@ -292,16 +293,49 @@ function AsotApp() {
       transition={transition}
       className="main"
     >
-    
       <div id="stars3"></div>
-        <div id="stars2"></div>
+      <div id="stars2"></div>
       <div className="music-container">
         <div id="stars"></div>
 
         <img src={LogoAsot} alt="" className="logo-1" />
         <div className="music-glass">
           <div className="music-bg"></div>
-          <div className="rest"></div>
+          <div className="rest">
+            <div className="asot-card">
+              <div className="asot-card--header"></div>
+              <div className="asot-card--body">
+                <div className='asot-top1000'>
+                  <a href='https://www.youtube.com/watch?v=P6l5Y5BgEns&t=111s'>ASOT TOP 1000 </a>
+                </div>
+                <div className="asot-card--item">
+                  <div>
+                    <h2 className="asot-card--subtitle">Utreht</h2>
+                    <h5 className="asot-card--country">Holandija</h5>
+                  </div>
+                  <h5> 3 & 4 septembar</h5>
+                  <a href='https://festival.astateoftrance.com/'>{<FiPlay className='asot-icon' />}</a>
+                </div>
+                <div className="asot-card--item">
+                  <div>
+                    <h2 className="asot-card--subtitle">Krakow</h2>
+                    <h5 className="asot-card--country">Poljska</h5>
+                  </div>
+                  <h5> Oktobar 2021</h5>
+                  <a href='https://festival.astateoftrance.com/'>{<FiPlay className='asot-icon' />}</a>
+                </div>
+                <div className="asot-card--item">
+                  <div>
+                    <h2 className="asot-card--subtitle">Moskva</h2>
+                    <h5 className="asot-card--country">Rusija</h5>
+                  </div>
+                  <h5>Oktobar 2021</h5>
+                  <a href="https://festival.astateoftrance.com/">{<FiPlay className='asot-icon'/>}</a>
+                </div>
+              
+              </div>
+            </div>
+          </div>
           <ReactJkMusicPlayer
             {...options}
             getAudioInstance={getAudioInstance}

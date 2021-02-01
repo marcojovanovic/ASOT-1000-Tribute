@@ -651,6 +651,9 @@ html {
 @media screen and (max-width: 757px) {
   .music-bg {
     flex: 1;
+    background-color:pink;
+    mix-blend-mode:normal;
+    filter:blur(0.5rem);
   }
 }
 
@@ -669,11 +672,140 @@ html {
 
 .rest {
   display: flex;
+  padding-top: 5rem;
+  margin-right: 3rem;
+  text-align: center;
+  flex: 0.6;
+}
+
+@media screen and (max-width: 1200px) {
+  .rest {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .rest {
+    padding-top: 0;
+    margin-right: 0;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .rest {
+     display:none;
+  }
+}
+
+.asot-card {
+  width: 70%;
+  height: 80%;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  position: relative;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .asot-card {
+    width:100%;
+    height:100%;
+    border-radius:none;
+  }
+}
+
+
+
+
+.asot-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.asot-icon {
+  font-size: 2rem;
+  color: #8659ca;
+  cursor: pointer;
+}
+
+.asot-icon:hover {
+  opacity: 0.5;
+}
+
+.asot-card--header {
+  width: 100%;
+  height: 50%;
+  background: url('../images/anthem.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-color: #d106d1;
+  mix-blend-mode: exclusion;
+  object-fit: contain;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.asot-card--body {
+  text-align: left;
+  padding-left: 3rem;
+  margin-top: 2.3rem;
+}
+
+.asot-card--item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.asot-card--subtitle {
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  color: #eb70af;
+}
+
+.asot-card--country {
+  font-size: 0.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+  color: #9e6a16;
+}
+
+.asot-top1000 a {
+  position: absolute;
+  top: 46%;
+  left: 1.2%;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: #eb70af;
+  font-weight: bold;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  animation: jump 0.1s linear infinite alternate;
+}
+
+.asot-top1000 a:hover {
+  transform: translateX(-60px) !important;
+  transition: all 1s ease-out;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .logo-1 {
   position: absolute;
-  top: 5%;
+  top: 6%;
   right: 7%;
   background: linear-gradient(
     to right bottom,
@@ -681,11 +813,12 @@ html {
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 9999px;
+  width: 17%;
 }
 
 .logo-2 {
   position: absolute;
-  bottom: 5%;
+  bottom: 6%;
   z-index: 200;
   left: 7%;
   background: linear-gradient(
@@ -694,35 +827,31 @@ html {
     rgba(255, 255, 255, 0.3)
   );
   border-radius: 9999px;
+  width: 17%;
+}
+
+@media screen and (max-width: 1600px) {
+  .logo-1 {
+    width: 20%;
+  }
+
+  .logo-2 {
+    width: 20%;
+  }
+
+  .logo-1,
+  .logo-2 {
+    background: unset;
+  }
 }
 
 @media screen and (max-width: 1300px) {
   .logo-1 {
-    transform: translateX(-15rem);
-  }
-
-  .logo-2 {
-    transform: translateX(20rem) translateY(3rem);
-  }
-
-  .logo-1,
-  .logo-2 {
-    background: unset;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .logo-1 {
     display: none;
   }
 
   .logo-2 {
     display: none;
-  }
-
-  .logo-1,
-  .logo-2 {
-    background: unset;
   }
 }
 
@@ -820,7 +949,7 @@ html {
   animation: none !important;
   vertical-align: text-bottom !important;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-mobile-play-model-tip-title svg {
     font-size: 19px;
     color: #fff !important;
@@ -972,7 +1101,7 @@ html {
 .react-jinke-music-player-mobile-progress .progress-bar {
   flex: 1 1 auto;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-mobile-progress .rc-slider {
     margin: 0 5px;
   }
@@ -1147,7 +1276,7 @@ html {
 .audio-lists-panel-header-delete-btn svg {
   font-size: 21px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .audio-lists-panel-header-delete-btn svg {
     font-size: 19px;
   }
@@ -1308,7 +1437,7 @@ html {
   background: transparent;
   text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.05);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main .music-player-lyric {
     font-size: 16px;
     z-index: 999;
@@ -1357,7 +1486,7 @@ html {
 .react-jinke-music-player-main svg:hover {
   color: #31c27c;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main svg {
     font-size: 22px;
   }
@@ -1385,7 +1514,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main .music-player-panel .panel-content .rc-slider {
     margin: 0 5px;
   }
@@ -1450,7 +1579,7 @@ html {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main
     .music-player-panel
     .panel-content
@@ -1479,7 +1608,7 @@ html {
   margin-left: 15px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main
     .music-player-panel
     .panel-content
@@ -1688,7 +1817,7 @@ html {
   .group {
   display: flex;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main
     .music-player-panel
     .panel-content
@@ -1745,7 +1874,7 @@ html {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main
     .music-player-panel
     .panel-content
@@ -1981,7 +2110,7 @@ html {
   svg {
   color: #31c27c !important;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player-main.light-theme .audio-lists-panel .audio-item {
     background-color: #fff !important;
   }
@@ -2087,7 +2216,7 @@ html {
   height: 80px;
   z-index: 999;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player {
     width: 60px;
     height: 60px;
@@ -2102,7 +2231,7 @@ html {
   width: 80px;
   height: 80px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player .music-player {
     width: 60px;
     height: 60px;
@@ -2120,7 +2249,7 @@ html {
   right: 0;
   top: 0;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player .music-player .destroy-btn {
     right: -3px;
   }
@@ -2145,6 +2274,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform:translateY(-100px) translateX(-35px) !important;
 }
 .react-jinke-music-player .music-player-controller:focus {
   outline: none;
@@ -2163,7 +2293,7 @@ html {
   animation: scale 5s linear infinite;
   cursor: pointer;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player .music-player-controller,
   .react-jinke-music-player
     .music-player-controller.music-player-playing:before {
@@ -2188,7 +2318,7 @@ html {
 .react-jinke-music-player .music-player-controller .controller-title {
   font-size: 14px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player .music-player-controller i {
     font-size: 20px;
   }
@@ -2210,7 +2340,7 @@ html {
   .music-player-controller-setting {
   width: 100%;
   height: 100%;
-  background: rgba(49, 194, 124, 0.3);
+  background: #4b12664d;
   transform: scale(0);
   border-radius: 50%;
   transition: all 0.4s cubic-bezier(0.43, -0.1, 0.16, 1.1);
@@ -2223,15 +2353,16 @@ html {
   align-items: center;
 }
 .react-jinke-music-player .audio-circle-process-bar {
-  stroke-width: 3px;
+  stroke-width: 0;
   stroke-linejoin: round;
   pointer-events: none;
-  width: 80px;
-  height: 80px;
+  width: 81px;
+  height: 81px;
   position: absolute;
   left: 0;
   top: -80px;
   z-index: 100;
+  transform:translateY(-21px) translateX(-35px) !important;
   animation: scaleTo 0.35s cubic-bezier(0.43, -0.1, 0.16, 1.1);
 }
 .react-jinke-music-player .audio-circle-process-bar circle[class='bg'] {
@@ -2245,7 +2376,7 @@ html {
   transition: stroke-dasharray 0.35s cubic-bezier(0.43, -0.1, 0.16, 1.1);
   transform: matrix(0, -1, 1, 0, 0, 80);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .react-jinke-music-player .audio-circle-process-bar,
   .react-jinke-music-player .audio-circle-process-bar circle {
     transform: matrix(0, -1, 1, 0, 0, 60);

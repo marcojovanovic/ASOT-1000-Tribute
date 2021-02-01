@@ -1,4 +1,4 @@
- export const audioList1 = [
+export const audioList1 = [
   {
     name: 'Intro',
     singer: 'A State of Trance',
