@@ -1,0 +1,237 @@
+.landing {
+  background: linear-gradient(to right bottom, #162f62bd, #6478e79a),
+    url('../images/alter2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10% 60%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  animation: hue 3s infinite alternate;
+}
+
+@media screen and (max-width: 1100px) {
+  .landing h1 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+
+  .landing {
+    background: linear-gradient(to right bottom, #162f62bd, #6478e79a),
+      url('../images/asot900.jpg');
+    background-position: center;
+  }
+}
+.landing::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(0.2rem);
+  transform: scale(1.15);
+  background-color: #0066ff;
+  mix-blend-mode: color-dodge;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.landing-img {
+  width: 9%;
+}
+
+@media screen and (max-width: 1600px) {
+  .landing img {
+   width:10%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .landing img {
+   width:11%
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing img {
+   width:15%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landing img {
+   width:20%
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .landing img {
+   width:35%
+  }
+}
+
+
+
+
+
+.landing-center {
+  text-align: center;
+}
+
+.landing-span {
+  color: #fb3030;
+}
+
+.landing h1 {
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .landing h1 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .landing h1 {
+    font-size: 4.1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .landing h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .landing h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+/* Button */
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #d106d1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-weight: bold;
+  letter-spacing: 4px;
+  overflow: hidden;
+  text-align: center !important;
+  transform: translateY(100px);
+}
+.btn:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  /*-webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
+}
+.btn:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+.btn:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+.btn span {
+  position: absolute;
+  display: block;
+}
+.btn span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.btn span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}

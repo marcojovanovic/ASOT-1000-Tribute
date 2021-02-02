@@ -1,0 +1,129 @@
+@keyframes playing {
+  to {
+    transform: rotateX(1turn);
+  }
+}
+@keyframes audioLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.5);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@keyframes scaleTo {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scaleFrom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fromTo {
+  0% {
+    transform: scale(1) translate3d(0, 110%, 0);
+  }
+  to {
+    transform: scale(1) translateZ(0);
+  }
+}
+@keyframes fromOut {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  to {
+    transform: scale(1) translate3d(0, 110%, 0);
+  }
+}
+@keyframes fromDown {
+  0% {
+    transform: scale(1) translate3d(0, -110%, 0);
+  }
+  to {
+    transform: scale(1) translateZ(0);
+  }
+}
+@keyframes translate {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes remove {
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rcSwitchOn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes rcSwitchOff {
+  0% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
