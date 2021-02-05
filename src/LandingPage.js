@@ -14,9 +14,9 @@ function LandingPage() {
     >
       <motion.h1 className="landing-center"
       
-      initial={{ x:'-50%', opacity:0 }}
-      animate={{ x:0, opacity:1 }}
-      transition={{ duration: 2 }}
+      initial={{ rotate:'180deg', transitionDelay:2 }}
+      animate={{ rotate:'-720deg', transitionDelay:2 }}
+      transition={{ duration: 0.5 }}
       >
         A State <span className="landing-span">of</span> Trance
         <span>

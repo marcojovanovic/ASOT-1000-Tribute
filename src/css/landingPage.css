@@ -2,7 +2,7 @@
   
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 10% 60%;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -20,12 +20,12 @@
     text-align: center;
   }
 
-  .landing {
-    background: linear-gradient(to right bottom, #162f62bd, #6478e79a),
-      url('../images/asot900.jpg');
-    background-position: center;
+    .landing{
+      min-height: 120vh;
+    }
+  
   }
-}
+
 .landing::after {
   content: '';
   width: 100%;
@@ -87,9 +87,6 @@
 }
 
 
-
-
-
 .landing-center {
   text-align: center;
 }
@@ -100,12 +97,14 @@
 
 .landing h1 {
   font-size: 5rem;
+  
 }
 
 @media screen and (max-width: 1600px) {
   .landing h1 {
     font-size: 4.5rem;
     text-align: center;
+
   }
 }
 
