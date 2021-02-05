@@ -11,6 +11,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
+    "react-image-and-background-image-fade": "^1.0.6",
     "react-jinke-music-player": "^4.21.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",

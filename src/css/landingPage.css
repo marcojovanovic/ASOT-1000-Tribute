@@ -1,6 +1,5 @@
 .landing {
-  background: linear-gradient(to right bottom, #162f62bd, #6478e79a),
-    url('../images/alter2.jpg');
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 10% 60%;
@@ -36,10 +35,11 @@
   top: 0;
   left: 0;
   z-index: -1;
-  filter: blur(0.2rem);
+  filter: blur(0.1rem);
   transform: scale(1.15);
-  background-color: #0066ff;
+  background: linear-gradient(to right bottom, #447ee9bd, #3a73ee9a);
   mix-blend-mode: color-dodge;
+
 }
 
 @keyframes hue {

@@ -3,23 +3,20 @@ import { Link } from 'react-router-dom';
 import zero from './images/1000.png';
 import './css/landingPage.css';
 import { motion } from 'framer-motion';
-import { animationThree, transition } from './framerAnimations';
+import { BackgroundImage } from 'react-image-and-background-image-fade';
 
 function LandingPage() {
   return (
-    <motion.div
-      initial="out"
-      animate="end"
-      exit="out"
-      variants={animationThree}
-      transition={transition}
+    <BackgroundImage
       className="landing"
+      src='/accets/alter2.jpg'
+      height='100vh'
     >
-      <motion.h1
-        initial={{ y: -200 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 2 }}
-        className="landing-center"
+      <motion.h1 className="landing-center"
+      
+      initial={{ x:'-50%', opacity:0 }}
+      animate={{ x:0, opacity:1 }}
+      transition={{ duration: 2 }}
       >
         A State <span className="landing-span">of</span> Trance
         <span>
@@ -31,21 +28,19 @@ function LandingPage() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 7 }}
+          transition={{ duration: 6 }}
           className="button_base b07_3d_double_roll"
         >
-         <a className='btn' href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-         
-         Enter ASOT
-    </a>
-        
+          <a className="btn" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Enter ASOT
+          </a>
         </motion.div>
       </Link>
-    </motion.div>
+    </BackgroundImage>
   );
 }
 
