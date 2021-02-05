@@ -672,22 +672,14 @@ html {
 
 .rest {
   display: flex;
-  padding-top: 5rem;
-  margin-right: 3rem;
+  justify-content:center;
+  align-items:center;
   text-align: center;
-  flex: 0.6;
-}
-
-@media screen and (max-width: 1200px) {
-  .rest {
-    margin-right: 1rem;
-  }
+  flex: 1;
 }
 
 @media screen and (max-width: 1000px) {
   .rest {
-    padding-top: 0;
-    margin-right: 0;
     flex: 1;
   }
 }
@@ -699,11 +691,10 @@ html {
 }
 
 .asot-card {
-  width: 70%;
+  width: 50%;
   height: 80%;
   background: #f4f4f4;
   border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   position: relative;
@@ -771,6 +762,21 @@ html {
   font-size: 1.3rem;
   letter-spacing: 0.2rem;
   color: #eb70af;
+  text-shadow:     0 1px 0 hsl(174,5%,80%),
+	                 0 2px 0 hsl(174,5%,75%),
+	                 0 3px 0 hsl(174,5%,70%),
+	                 0 4px 0 hsl(174,5%,66%),
+	                 0 5px 0 hsl(174,5%,64%),
+	                 0 6px 0 hsl(174,5%,62%),
+	                 0 7px 0 hsl(174,5%,61%),
+	                 0 8px 0 hsl(174,5%,60%),
+	
+	                 0 0 5px rgba(0,0,0,.05),
+	                0 1px 3px rgba(0,0,0,.2),
+	                0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.2),
+	              0 10px 10px rgba(0,0,0,.2),
+	              0 20px 20px rgba(0,0,0,.3);
 }
 
 .asot-card--country {
