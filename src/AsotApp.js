@@ -37,7 +37,7 @@ const options = {
 
   // Da li se na preload krece audio  [type `Boolean | String`, default `false`]
   //"auto|metadata|none" "true| false"
-  preload: false,
+  preload: true,
 
   // glassBg playera da se prikaze ili ne  [type `Boolean`, default `false`]
   glassBg: false,
@@ -88,7 +88,7 @@ const options = {
    * [ type `Boolean` default 'false' ]
    * The default audioPlay handle function will be played again after each pause, If you only want to trigger it once, you can set 'true'
    */
-  once: false,
+  once: true,
 
   // Da li na pocetku da na load da se automatski pusti prva numera [type `Boolean` default 'true']
   autoPlay: true,
