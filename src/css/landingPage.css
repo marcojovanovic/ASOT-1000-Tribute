@@ -32,17 +32,6 @@
   width: 9%;
 }
 
-@media screen and (max-width: 1100px) {
-  .landing__page h1 {
-    font-size: 4.5rem;
-    text-align: center;
-  }
-
-  .landing__page {
-    min-height: 120vh;
-  }
-}
-
 .landing__page--center {
   text-align: center;
 }
@@ -52,15 +41,15 @@
 }
 
 .landing__page h1 {
-  font-size: 5rem;
+  font-size: calc(3rem + 1.3vw);
 }
 
-
-
-
 /* Media Queries */
-
-
+@media screen and (max-width: 1100px) {
+  .landing__page {
+    min-height: 120vh;
+  }
+}
 
 @media screen and (max-width: 1600px) {
   .landing img {
@@ -78,7 +67,6 @@
     font-size: 4.1rem;
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   .landing img {
@@ -103,7 +91,6 @@
     width: 35%;
   }
 }
-
 
 @media screen and (max-width: 1000px) {
   .landing h1 {

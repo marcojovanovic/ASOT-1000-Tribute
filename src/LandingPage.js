@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import asot1000 from './assets/asot1000/1000.png';
 import './css/landingPage.css';
+import './css/reset.css';
 import './css/animations.css'
 import './css/landingPageUtilitiy.css'
 import { motion } from 'framer-motion';

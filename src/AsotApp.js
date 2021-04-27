@@ -6,6 +6,8 @@ import LogoAsot from './assets/asotLogo/asotLogo.png';
 import './css/main.css';
 import './css/animations.css';
 import './css/slider.css';
+import './css/mainBackground.css';
+import './css/reset.css';
 import { FiPlay } from 'react-icons/fi';
 
 import { audioList1 } from './data.js';

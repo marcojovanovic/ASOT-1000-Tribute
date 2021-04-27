@@ -1,4 +1,4 @@
-import './App.css';
+
 import AsotApp from './AsotApp';
 import Landing from './LandingPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
