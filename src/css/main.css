@@ -628,7 +628,7 @@ html {
 }
 
 .music-bg {
-  background: url('../images/bosh.jpg');
+  background: url('../assets/asotRobots/invasionRobots.jpg');
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -696,7 +696,6 @@ html {
   background: #f4f4f4;
   border-radius: 10px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
   position: relative;
 }
 
@@ -726,7 +725,7 @@ html {
 .asot-card--header {
   width: 100%;
   min-height: 50%;
-  background: url('../images/anthem.jpg');
+  background: url("../assets/asot1000Anthem/anthem1000.jpg");
   background-position: top center;
   background-size: cover;
   background-color: #d106d1;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import zero from './images/1000.png';
+import asot1000 from './assets/asot1000/1000.png';
 import './css/landingPage.css';
 import './css/animations.css'
 import './css/landingPageUtilitiy.css'
@@ -11,7 +11,7 @@ function LandingPage() {
   return (
     <BackgroundImage
       className="landing__page"
-      src='/assets/alter2.jpg'
+      src='/assets/landingPageImg/landingPageImg.jpg'
       height='100vh'
     >
       <motion.h1 className="landing__page--center"
@@ -22,7 +22,7 @@ function LandingPage() {
       >
         A State <span className="landing__page--span">of</span> Trance
         <span>
-          <img className="landing__page--img" src={zero} alt="" />
+          <img className="landing__page--img" src={asot1000} alt="" />
         </span>
         Celebration
       </motion.h1>

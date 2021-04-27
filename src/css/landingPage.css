@@ -55,9 +55,10 @@
   font-size: 5rem;
 }
 
+
+
+
 /* Media Queries */
-
-
 
 
 
@@ -102,7 +103,6 @@
     width: 35%;
   }
 }
-
 
 
 @media screen and (max-width: 1000px) {

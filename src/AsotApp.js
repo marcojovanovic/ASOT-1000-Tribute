@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { animationTwo, transition } from './framerAnimations';
 import ReactJkMusicPlayer from 'react-jinke-music-player';
 import { motion } from 'framer-motion';
-import LogoAsot from './images/logoAsot.png';
+import LogoAsot from './assets/asotLogo/asotLogo.png';
 import './css/main.css';
 import './css/animations.css';
 import './css/slider.css';
