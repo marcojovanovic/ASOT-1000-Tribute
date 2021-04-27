@@ -1,3 +1,8 @@
+
+
+/* Main page animations */
+
+
 @keyframes playing {
   to {
     transform: rotateX(1turn);
@@ -125,5 +130,63 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+/* Landing Page Animations  */
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
   }
 }

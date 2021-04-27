@@ -8,9 +8,7 @@ import './css/animations.css';
 import './css/slider.css';
 import { FiPlay } from 'react-icons/fi';
 
-import {audioList1} from './data.js'
-
-
+import { audioList1 } from './data.js';
 
 const options = {
   //izvor podataka
@@ -56,28 +54,28 @@ const options = {
 
   // textualna konfiguracija audio playera
   playModeText: {
-    order: '顺序播放',
-    orderLoop: '列表循环',
-    singleLoop: '单曲循环',
-    shufflePlay: '随机播放',
+    order: '',
+    orderLoop: '',
+    singleLoop: '',
+    shufflePlay: '',
   },
 
   //audio controller open text  [ type `String | ReactNode` default 'open']
-  openText: '打开',
+  openText: '',
 
   //audio controller close text  [ type `String | ReactNode` default 'close']
-  closeText: '关闭',
+  closeText: '',
 
   //audio theme switch checkedText  [ type `String | ReactNode` default '-']
-  checkedText: '开',
+  checkedText: '',
 
   //audio theme switch unCheckedText [ type `String | ReactNode` default '-']
-  unCheckedText: '关',
+  unCheckedText: '',
 
   // audio list panel show text of the playlist has no songs [ type `String` | ReactNode  default 'no music']
-  notContentText: '暂无音乐',
+  notContentText: '',
 
-  panelTitle: '播放列表',
+  panelTitle: '',
 
   defaultPlayMode: 'order',
 
@@ -307,8 +305,10 @@ function AsotApp() {
             <div className="asot-card">
               <div className="asot-card--header"></div>
               <div className="asot-card--body">
-                <div className='asot-top1000'>
-                  <a href='https://www.youtube.com/watch?v=P6l5Y5BgEns&t=111s'>ASOT TOP 1000 </a>
+                <div className="asot-top1000">
+                  <a href="https://www.youtube.com/watch?v=P6l5Y5BgEns&t=111s">
+                    ASOT TOP 1000{' '}
+                  </a>
                 </div>
                 <div className="asot-card--item">
                   <div>
@@ -316,7 +316,9 @@ function AsotApp() {
                     <h5 className="asot-card--country">Holandija</h5>
                   </div>
                   <h5> 3 & 4 septembar</h5>
-                  <a href='https://festival.astateoftrance.com/'>{<FiPlay className='asot-icon' />}</a>
+                  <a href="https://festival.astateoftrance.com/">
+                    {<FiPlay className="asot-icon" />}
+                  </a>
                 </div>
                 <div className="asot-card--item">
                   <div>
@@ -324,7 +326,9 @@ function AsotApp() {
                     <h5 className="asot-card--country">Poljska</h5>
                   </div>
                   <h5> Oktobar 2021</h5>
-                  <a href='https://festival.astateoftrance.com/'>{<FiPlay className='asot-icon' />}</a>
+                  <a href="https://festival.astateoftrance.com/">
+                    {<FiPlay className="asot-icon" />}
+                  </a>
                 </div>
                 <div className="asot-card--item">
                   <div>
@@ -332,9 +336,10 @@ function AsotApp() {
                     <h5 className="asot-card--country">Rusija</h5>
                   </div>
                   <h5>Oktobar 2021</h5>
-                  <a href="https://festival.astateoftrance.com/">{<FiPlay className='asot-icon'/>}</a>
+                  <a href="https://festival.astateoftrance.com/">
+                    {<FiPlay className="asot-icon" />}
+                  </a>
                 </div>
-              
               </div>
             </div>
           </div>

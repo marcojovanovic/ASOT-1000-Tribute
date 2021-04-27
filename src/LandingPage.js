@@ -2,25 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import zero from './images/1000.png';
 import './css/landingPage.css';
+import './css/animations.css'
+import './css/landingPageUtilitiy.css'
 import { motion } from 'framer-motion';
 import { BackgroundImage } from 'react-image-and-background-image-fade';
 
 function LandingPage() {
   return (
     <BackgroundImage
-      className="landing"
-      src='/accets/alter2.jpg'
+      className="landing__page"
+      src='/assets/alter2.jpg'
       height='100vh'
     >
-      <motion.h1 className="landing-center"
+      <motion.h1 className="landing__page--center"
       
       initial={{ rotate:'180deg', transitionDelay:2 }}
       animate={{ rotate:'-720deg', transitionDelay:2 }}
       transition={{ duration: 0.5 }}
       >
-        A State <span className="landing-span">of</span> Trance
+        A State <span className="landing__page--span">of</span> Trance
         <span>
-          <img className="landing-img" src={zero} alt="" />
+          <img className="landing__page--img" src={zero} alt="" />
         </span>
         Celebration
       </motion.h1>
@@ -31,7 +33,7 @@ function LandingPage() {
           transition={{ duration: 6 }}
           className="button_base b07_3d_double_roll"
         >
-          <a className="btn" href="#">
+          <a className="landing__page--btn" href="#">
             <span></span>
             <span></span>
             <span></span>

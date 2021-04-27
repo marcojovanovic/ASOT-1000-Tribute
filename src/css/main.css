@@ -716,10 +716,11 @@ html {
   font-size: 2rem;
   color: #8659ca;
   cursor: pointer;
+  transition:all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .asot-icon:hover {
-  opacity: 0.5;
+  color:#eb70af;
 }
 
 .asot-card--header {
