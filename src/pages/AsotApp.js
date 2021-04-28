@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { animationTwo, transition } from './framerAnimations';
+import { animationTwo, transition } from '../components/framerAnimations';
 import ReactJkMusicPlayer from 'react-jinke-music-player';
 import { motion } from 'framer-motion';
-import LogoAsot from './assets/asotLogo/asotLogo.png';
-import './css/main.css';
-import './css/animations.css';
-import './css/slider.css';
-import './css/mainBackground.css';
-import './css/reset.css';
+import LogoAsot from '../assets/asotLogo/asotLogo.png';
+import '../css/reset.css';
+import '../css/main.css';
+import '../css/animations.css';
+import '../css/slider.css';
+import '../css/mainBackground.css';
+import '../css/asotCard.css';
 import { FiPlay } from 'react-icons/fi';
 
-import { audioList1 } from './data.js';
+import { audioList1 } from '../data.js';
 
 const options = {
   //izvor podataka
@@ -50,8 +51,8 @@ const options = {
 
   //inicijalna pozicija za muzicki player    [ type `Object` default '{top:0,left:0}' ]
   defaultPosition: {
-    top: 250,
-    left: 95,
+    top: 100,
+    left: 170,
   },
 
   // textualna konfiguracija audio playera
@@ -149,38 +150,38 @@ const options = {
 
   //Music is downloaded handle
   onAudioDownload(audioInfo) {
-    console.log('audio download', audioInfo);
+    // console.log('audio download', audioInfo);
   },
 
   //audio play handle
   onAudioPlay(audioInfo) {
-    console.log('audio playing', audioInfo);
+    //console.log('audio playing', audioInfo);
   },
 
   //audio pause handle
   onAudioPause(audioInfo) {
-    console.log('audio pause', audioInfo);
+    //console.log('audio pause', audioInfo);
   },
 
   //When the user has moved/jumped to a new location in audio
   onAudioSeeked(audioInfo) {
-    console.log('audio seeked', audioInfo);
+    //console.log('audio seeked', audioInfo);
   },
 
   //When the volume has changed  min = 0.0  max = 1.0
   onAudioVolumeChange(currentVolume) {
-    console.log('audio volume change', currentVolume);
+    //console.log('audio volume change', currentVolume);
   },
 
   //The single song is ended handle
   onAudioEnded(audioInfo) {
     // swal('Audio is ended!', '', 'success')
-    console.log('audio ended', audioInfo);
+    //console.log('audio ended', audioInfo);
   },
 
   //audio load abort The target event like {...,audioName:xx,audioSrc:xx,playMode:xx}
   onAudioAbort(e) {
-    console.log('audio abort', e);
+    //console.log('audio abort', e);
   },
 
   //audio play progress handle
@@ -190,23 +191,23 @@ const options = {
 
   //audio reload handle
   onAudioReload(audioInfo) {
-    console.log('audio reload:', audioInfo);
+    //console.log('audio reload:', audioInfo);
   },
 
   //audio load failed error handle
   onAudioLoadError(e) {
-    console.error('audio load err', e);
+    //console.error('audio load err', e);
   },
 
   //theme change handle
   onThemeChange(theme) {
-    console.log('theme change:', theme);
+    //console.log('theme change:', theme);
   },
 
   onAudioListsChange(currentPlayId, audioLists, audioInfo) {
-    console.log('[currentPlayId] audio lists change:', currentPlayId);
-    console.log('[audioLists] audio lists change:', audioLists);
-    console.log('[audioInfo] audio lists change:', audioInfo);
+    // console.log('[currentPlayId] audio lists change:', currentPlayId);
+    // console.log('[audioLists] audio lists change:', audioLists);
+    // console.log('[audioInfo] audio lists change:', audioInfo);
   },
 
   onAudioPlayTrackChange(currentPlayId, audioLists, audioInfo) {
@@ -219,23 +220,23 @@ const options = {
   },
 
   onPlayModeChange(playMode) {
-    console.log('play mode change:', playMode);
+    //console.log('play mode change:', playMode);
   },
 
   onModeChange(mode) {
-    console.log('mode change:', mode);
+    // console.log('mode change:', mode);
   },
 
   onAudioListsPanelChange(panelVisible) {
-    console.log('audio lists panel visible:', panelVisible);
+    //console.log('audio lists panel visible:', panelVisible);
   },
 
   onAudioListsDragEnd(fromIndex, endIndex) {
-    console.log('audio lists drag end:', fromIndex, endIndex);
+    // console.log('audio lists drag end:', fromIndex, endIndex);
   },
 
   onAudioLyricChange(lineNum, currentLyric) {
-    console.log('audio lyric change:', lineNum, currentLyric);
+    // console.log('audio lyric change:', lineNum, currentLyric);
   },
 
   // custom music player root node
@@ -250,7 +251,7 @@ const options = {
    * audio.crossOrigin = 'xxx' // config cross origin
    */
   getAudioInstance(audio) {
-    console.log('audio instance', audio);
+    //console.log('audio instance', audio);
   },
 
   // transform audio info like return a Promise
@@ -275,7 +276,7 @@ function AsotApp() {
   const [audioInstance, setAudioInstance] = useState();
 
   const getAudioInstance = (instance) => {
-    console.log('Getting audio instance', instance);
+    //console.log('Getting audio instance', instance);
     setAudioInstance(instance);
   };
 
@@ -283,7 +284,7 @@ function AsotApp() {
   const onPauseHandler = () => setPlay(false);
 
   useEffect(() => {
-    console.log('Updated audio instance', audioInstance);
+    //console.log('Updated audio instance', audioInstance);
   }, [audioInstance]);
 
   return (
@@ -297,49 +298,49 @@ function AsotApp() {
     >
       <div id="stars3"></div>
       <div id="stars2"></div>
-      <div className="music-container">
+      <div className="asot__trance">
         <div id="stars"></div>
 
         <img src={LogoAsot} alt="" className="logo-1" />
-        <div className="music-glass">
-          <div className="music-bg"></div>
-          <div className="rest">
-            <div className="asot-card">
-              <div className="asot-card--header"></div>
-              <div className="asot-card--body">
+        <div className="asot__trance--glass">
+          <div className="asot__trance--bg"></div>
+          <div className="asot__trance--flex__items">
+            <div className="asot__trance--card">
+              <div className="asot__trance--card__header"></div>
+              <div className="asot__trance--card__body">
                 <div className="asot-top1000">
                   <a href="https://www.youtube.com/watch?v=P6l5Y5BgEns&t=111s">
                     ASOT TOP 1000{' '}
                   </a>
                 </div>
-                <div className="asot-card--item">
+                <div className="asot__trance--card__item">
                   <div>
-                    <h2 className="asot-card--subtitle">Utreht</h2>
-                    <h5 className="asot-card--country">Holandija</h5>
+                    <h2 className="asot__trance--card__subtitle">Utreht</h2>
+                    <h5 className="asot__trance--card__country">Holandija</h5>
                   </div>
                   <h5> 3 & 4 septembar</h5>
                   <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot-icon" />}
+                    {<FiPlay className="asot__trance-card__icon" />}
                   </a>
                 </div>
-                <div className="asot-card--item">
+                <div className="asot__trance--card__item">
                   <div>
-                    <h2 className="asot-card--subtitle">Krakow</h2>
-                    <h5 className="asot-card--country">Poljska</h5>
+                    <h2 className="asot__trance--card__subtitle">Krakow</h2>
+                    <h5 className="asot__trance--card__country">Poljska</h5>
                   </div>
                   <h5> Oktobar 2021</h5>
                   <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot-icon" />}
+                    {<FiPlay className="asot__trance-card__icon" />}
                   </a>
                 </div>
-                <div className="asot-card--item">
+                <div className="asot__trance--card__item">
                   <div>
-                    <h2 className="asot-card--subtitle">Moskva</h2>
-                    <h5 className="asot-card--country">Rusija</h5>
+                    <h2 className="asot__trance--card__subtitle">Moskva</h2>
+                    <h5 className="asot__trance--card__country">Rusija</h5>
                   </div>
                   <h5>Oktobar 2021</h5>
                   <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot-icon" />}
+                    {<FiPlay className="asot__trance-card__icon" />}
                   </a>
                 </div>
               </div>

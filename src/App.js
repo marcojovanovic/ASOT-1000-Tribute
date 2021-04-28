@@ -1,6 +1,6 @@
 
-import AsotApp from './AsotApp';
-import Landing from './LandingPage'
+import AsotApp from './pages/AsotApp';
+import Landing from './pages/LandingPage'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
