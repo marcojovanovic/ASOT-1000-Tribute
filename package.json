@@ -1,29 +1,30 @@
 {
-  "name": "react_alter_carbon",
+  "name": "serverless-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.2.2",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.2",
     "airtable-node": "^0.1.20",
-    "axios": "^0.21.0",
-    "framer-motion": "^3.3.0-beta.22",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "framer-motion": "^4.1.11",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.2.0",
     "react-image-and-background-image-fade": "^1.0.6",
-    "react-jinke-music-player": "^4.21.2",
-    "react-router": "^5.2.0",
+    "react-jinke-music-player": "^4.23.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "netlify": "ntl dev"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "netlify-cli": "^3.4.5"
   }
 }
