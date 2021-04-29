@@ -9,26 +9,26 @@ import '../css/animations.css';
 import '../css/slider.css';
 import '../css/mainBackground.css';
 import '../css/asotCard.css';
-import { FiPlay } from 'react-icons/fi';
 
 import axios from 'axios';
+import AsotCard from '../components/AsotCard';
 
 const url = '/api/trance';
 
 function AsotApp() {
   const [play, setPlay] = useState(false);
-  const [audioInstance, setAudioInstance] = useState();
+  const [audioInstance, setAudioInstance] = useState(null);
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
 
+  // getting songs from serverless cloud
+
   const fetchData = async () => {
     try {
       const { data } = await axios.get(url);
-
-      console.log(data.sort((a,b)=>b.id - a.id))
 
       setSongs(data);
     } catch (error) {}
@@ -43,8 +43,13 @@ function AsotApp() {
     };
   });
 
+  const getAudioInstance = (instance) => {
+    //console.log('Getting audio instance', instance);
+    setAudioInstance(instance);
+  };
 
-  
+  const onPlayHandler = () => setPlay(true);
+  const onPauseHandler = () => setPlay(false);
 
   const options = {
     //izvor podataka
@@ -181,146 +186,11 @@ function AsotApp() {
     // Auto hide the cover photo if no cover photo is available [type `Boolean` default `false`]
     autoHiddenCover: true,
 
-    //Music is downloaded handle
-    onAudioDownload(audioInfo) {
-      // console.log('audio download', audioInfo);
-    },
-
-    //audio play handle
-    onAudioPlay(audioInfo) {
-      //console.log('audio playing', audioInfo);
-    },
-
-    //audio pause handle
-    onAudioPause(audioInfo) {
-      //console.log('audio pause', audioInfo);
-    },
-
-    //When the user has moved/jumped to a new location in audio
-    onAudioSeeked(audioInfo) {
-      //console.log('audio seeked', audioInfo);
-    },
-
-    //When the volume has changed  min = 0.0  max = 1.0
-    onAudioVolumeChange(currentVolume) {
-      //console.log('audio volume change', currentVolume);
-    },
-
-    //The single song is ended handle
-    onAudioEnded(audioInfo) {
-      // swal('Audio is ended!', '', 'success')
-      //console.log('audio ended', audioInfo);
-    },
-
-    //audio load abort The target event like {...,audioName:xx,audioSrc:xx,playMode:xx}
-    onAudioAbort(e) {
-      //console.log('audio abort', e);
-    },
-
-    //audio play progress handle
-    onAudioProgress(audioInfo) {
-      // console.log('audio progress',audioInfo);
-    },
-
-    //audio reload handle
-    onAudioReload(audioInfo) {
-      //console.log('audio reload:', audioInfo);
-    },
-
-    //audio load failed error handle
-    onAudioLoadError(e) {
-      //console.error('audio load err', e);
-    },
-
-    //theme change handle
-    onThemeChange(theme) {
-      //console.log('theme change:', theme);
-    },
-
-    onAudioListsChange(currentPlayId, audioLists, audioInfo) {
-      // console.log('[currentPlayId] audio lists change:', currentPlayId);
-      // console.log('[audioLists] audio lists change:', audioLists);
-      // console.log('[audioInfo] audio lists change:', audioInfo);
-    },
-
-    onAudioPlayTrackChange(currentPlayId, audioLists, audioInfo) {
-
-      /*
-      console.log(
-        'audio play track change:',
-        currentPlayId,
-        audioLists,
-        audioInfo
-      );
-
-      */
-    },
-
-    
-
-    onPlayModeChange(playMode) {
-      //console.log('play mode change:', playMode);
-    },
-
-    onModeChange(mode) {
-      // console.log('mode change:', mode);
-    },
-
-    onAudioListsPanelChange(panelVisible) {
-      //console.log('audio lists panel visible:', panelVisible);
-    },
-
-    onAudioListsDragEnd(fromIndex, endIndex) {
-      // console.log('audio lists drag end:', fromIndex, endIndex);
-    },
-
-    onAudioLyricChange(lineNum, currentLyric) {
-      // console.log('audio lyric change:', lineNum, currentLyric);
-    },
-
     // custom music player root node
     getContainer() {
       return document.body;
     },
-
-    /**
-     * @description get origin audio element instance , you can use it do everything
-     * @example
-     * audio.playbackRate = 1.5  // set play back rate
-     * audio.crossOrigin = 'xxx' // config cross origin
-     */
-    getAudioInstance(audio) {
-      //console.log('audio instance', audio);
-    },
-
-    // transform audio info like return a Promise
-
-    /**
-     * @return
-     *  {
-     *    src: 'xxx',
-     *    filename: 'xxx',
-     *    mimeType: 'xxx'
-     *  }
-     */
-    // onBeforeAudioDownload() {
-    //   return Promise.resolve({
-    //     src: '1.mp3'
-    //   })
-    // }
   };
-
-  const getAudioInstance = (instance) => {
-    //console.log('Getting audio instance', instance);
-    setAudioInstance(instance);
-  };
-
-  const onPlayHandler = () => setPlay(true);
-  const onPauseHandler = () => setPlay(false);
-
-  useEffect(() => {
-    //console.log('Updated audio instance', audioInstance);
-  }, [audioInstance]);
 
   return (
     <motion.div
@@ -336,50 +206,11 @@ function AsotApp() {
       <div className="asot__trance">
         <div id="stars"></div>
 
-        <img src={LogoAsot} alt="" className="logo-1" />
+        <img src={LogoAsot} alt="" className="asot__trance--logo-1" />
         <div className="asot__trance--glass">
           <div className="asot__trance--bg"></div>
           <div className="asot__trance--flex__items">
-            <div className="asot__trance--card">
-              <div className="asot__trance--card__header"></div>
-              <div className="asot__trance--card__body">
-                <div className="asot-top1000">
-                  <a href="https://www.youtube.com/watch?v=P6l5Y5BgEns&t=111s">
-                    ASOT TOP 1000{' '}
-                  </a>
-                </div>
-                <div className="asot__trance--card__item">
-                  <div>
-                    <h2 className="asot__trance--card__subtitle">Utreht</h2>
-                    <h5 className="asot__trance--card__country">Holandija</h5>
-                  </div>
-                  <h5> 3 & 4 septembar</h5>
-                  <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot__trance-card__icon" />}
-                  </a>
-                </div>
-                <div className="asot__trance--card__item">
-                  <div>
-                    <h2 className="asot__trance--card__subtitle">Krakow</h2>
-                    <h5 className="asot__trance--card__country">Poljska</h5>
-                  </div>
-                  <h5> Oktobar 2021</h5>
-                  <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot__trance-card__icon" />}
-                  </a>
-                </div>
-                <div className="asot__trance--card__item">
-                  <div>
-                    <h2 className="asot__trance--card__subtitle">Moskva</h2>
-                    <h5 className="asot__trance--card__country">Rusija</h5>
-                  </div>
-                  <h5>Oktobar 2021</h5>
-                  <a href="https://festival.astateoftrance.com/">
-                    {<FiPlay className="asot__trance-card__icon" />}
-                  </a>
-                </div>
-              </div>
-            </div>
+            <AsotCard />
           </div>
           <ReactJkMusicPlayer
             {...options}
@@ -388,7 +219,7 @@ function AsotApp() {
             onAudioPause={onPauseHandler}
           />
         </div>
-        <img src={LogoAsot} alt="" className="logo-2" />
+        <img src={LogoAsot} alt="" className="asot__trance--logo-2" />
       </div>
     </motion.div>
   );

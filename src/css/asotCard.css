@@ -23,36 +23,6 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 1600px) {
-  .asot__trance--glass {
-    width: 80%;
-  }
-
-  .react-jinke-music-player-main {
-    width: 80% !important;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .asot__trance--glass {
-    width: 90%;
-  }
-
-  .react-jinke-music-player-main {
-    width: 90% !important;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .asot__trance--glass {
-    width: 100%;
-  }
-
-  .react-jinke-music-player-main {
-    width: 100% !important;
-  }
-}
-
 .asot__trance--bg {
   background: url('../assets/asotRobots/invasionRobots.jpg');
   background-position: top;
@@ -66,21 +36,6 @@
   animation: hue 5s infinite alternate;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-}
-
-@media screen and (max-width: 1000px) {
-  .asot__trance--bg {
-    flex: 0.5;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .asot__trance--bg {
-    flex: 1;
-    background-color: pink;
-    mix-blend-mode: normal;
-    filter: blur(0.5rem);
-  }
 }
 
 .asot__trance--bg::after {
@@ -104,33 +59,15 @@
   flex: 1;
 }
 
-@media screen and (max-width: 1000px) {
-  .asot__trance--flex__items {
-    flex: 1;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .asot__trance--flex__items {
-    display: none;
-  }
-}
+/* asot card */
 
 .asot__trance--card {
   width: 50%;
-  height: 75%;
-  background: #f4f4f4;
+  min-height: 70vh;
+  background: #fff;
   border-radius: 10px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
-}
-
-@media screen and (max-width: 1000px) {
-  .asot__trance--card {
-    width: 100%;
-    height: 100%;
-    border-radius: none;
-  }
 }
 
 .asot__trance--card:hover {
@@ -150,7 +87,7 @@
 
 .asot__trance--card__header {
   width: 100%;
-  min-height: 50%;
+  min-height: 33vh;
   background: url('../assets/asot1000Anthem/anthem1000.jpg');
   background-position: top center;
   background-size: cover;
@@ -200,7 +137,7 @@
 
 .asot-top1000 a {
   position: absolute;
-  top: 46%;
+  top: 44%;
   left: 1.2%;
   padding: 0.3rem;
   font-size: 1.1rem;
@@ -217,17 +154,78 @@
   transition: all 1s ease-out;
 }
 
-@keyframes jump {
-  0% {
-    transform: translateY(5px);
+/* media queries */
+
+@media screen and (max-width: 1600px) {
+  .asot__trance--glass {
+    width: 80%;
   }
 
-  100% {
-    transform: translateY(0px);
+  .react-jinke-music-player-main {
+    width: 80% !important;
   }
 }
 
-.logo-1 {
+@media screen and (max-width: 1300px) {
+  .asot__trance--glass {
+    width: 90%;
+  }
+
+  .asot-top1000 a {
+    top: 35%;
+  }
+
+  .react-jinke-music-player-main {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .asot__trance--glass {
+    width: 100%;
+  }
+
+  .react-jinke-music-player-main {
+    width: 100% !important;
+  }
+
+  .asot__trance--card__header {
+    min-height: 40vh;
+  }
+
+  .asot__trance--bg {
+    flex: 0.5;
+  }
+
+  .asot__trance--flex__items {
+    flex: 1;
+  }
+
+  .asot__trance--card {
+    width: 100%;
+    height: 100%;
+    border-radius: none;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .asot__trance--bg {
+    flex: 1;
+    background-color: pink;
+    mix-blend-mode: normal;
+    filter: blur(0.5rem);
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .asot__trance--flex__items {
+    display: none;
+  }
+}
+
+/* logo behaviour */
+
+.asot__trance--logo-1 {
   position: absolute;
   top: 6%;
   right: 7%;
@@ -240,7 +238,7 @@
   width: 17%;
 }
 
-.logo-2 {
+.asot__trance--logo-2 {
   position: absolute;
   bottom: 6%;
   z-index: 200;
@@ -255,26 +253,38 @@
 }
 
 @media screen and (max-width: 1600px) {
-  .logo-1 {
+  .asot__trance--logo-1 {
     width: 20%;
   }
 
-  .logo-2 {
+  .asot__trance--logo-2 {
     width: 20%;
   }
 
-  .logo-1,
-  .logo-2 {
+  .asot__trance--logo-1,
+  .asot__trance--logo-2 {
     background: unset;
   }
 }
 
 @media screen and (max-width: 1300px) {
-  .logo-1 {
+  .asot__trance--logo-1 {
     display: none;
   }
 
-  .logo-2 {
+  .asot__trance--logo-2 {
     display: none;
+  }
+}
+
+/* animation asot jumping */
+
+@keyframes jump {
+  0% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

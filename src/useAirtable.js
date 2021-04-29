@@ -4,9 +4,6 @@ import axios from 'axios';
 const url = '/api/trance';
 
 
-
-
-
 function useAirtable() {
   const [songs, setSongs] = useState([]);
 
