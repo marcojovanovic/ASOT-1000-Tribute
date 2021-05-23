@@ -64,13 +64,16 @@
 
 BEM arihitektura u pisanju CSS fajlova, no kada bolje razmilsim trudicu se da odsada maximalno koristim styled-components, cini mi se da fajl strutkura projekta nije idealna i trudicu se da je popravim kroz neke druge radove
 
-![alt text](https://i.ibb.co/D73wGHD/asot-card-1.png 'asot-1000')
+![alt text](https://i.ibb.co/vYfhSMw/asotagain-1.png 'asot-1000')
 
 ## Serverless
 
-Kako koristeci Airtable serverless arhitekturu mozemo da resimo veliki problem celokupnog projekta, a to je skladistenje velikih mp3 fajlova.
+Kako koristeci Airtable serverless arhitekturu mozemo da resimo veliki problem celokupnog projekta, a to je skladistenje velikih mp3 fajlova. Nakon sto skladistimo svoje fajlove direktno na airtable, potrebno je uspostaviti uspesno vezu sa njenim API, a kasnije proslediti funkcionalnom delu aplikacije nesto sa cime moze da radi
 
 ![alt text](https://i.ibb.co/4ZpWqZN/serveragain-1.png 'asot-1000')
+
+
+![alt text](https://i.ibb.co/Z83PDgn/fetch-1.png 'asot-1000')
 
 ### Framer Motion
 
