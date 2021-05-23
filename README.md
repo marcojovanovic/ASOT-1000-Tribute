@@ -61,7 +61,7 @@
 
 
 
-![alt text](https://image.over-blog.com/a-YYNOwOY6N_fInsL86S_j0uqsI=/filters:no_upscale()/image%2F0933696%2F20210122%2Fob_f4d937_tiesto-top-trance-1000-2021-asot-armin.png "asot-1000")
+![alt text](https://ibb.co/3NWJkdL "asot-1000")
 
 > Odmah da naglasim da projekat nije preuzet sa nekog YouTube tutorijala ili kursa. 
   Obicno se na nekog ko konkurise za praksu ili junior poslove donekle sumnja da je maznuo projekat sa nekog kursa i postavio kao svoj. Kandidat za posao slusa savet sa YouTuba i odradi copy/paste nekoliko projekata i spreman je za posao !  
