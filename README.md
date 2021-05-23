@@ -40,6 +40,8 @@
  #prev song,
  #show playlist,
  #download song,
+ #repeat song
+ #dark/light mode of player
  #show/hide player,
  #music-player responsive
 ```
