@@ -2,6 +2,9 @@
 
 ---
 
+![alt text](https://tranceattack.net/wordpress/wp-content/uploads/2021/01/asotlive_20210123_232412.jpg 'asot-1000')
+
+
 ![alt text](<https://image.over-blog.com/a-YYNOwOY6N_fInsL86S_j0uqsI=/filters:no_upscale()/image%2F0933696%2F20210122%2Fob_f4d937_tiesto-top-trance-1000-2021-asot-armin.png> 'asot-1000')
 
 > Dugo godina slusam trance muziku. Prakticno godinama odbrojavam do epizode 1000, ali nikada nisam verovao da ce ikada ta epizoda doci. Cinilo se kao da je citava vecnost ispred epizode 1000, ali vreme neumoljivo ide napred, neverovatno. Video sam da su pojedini fanovi postavljali zanimljive slike i na neki nacin obelezili znacajan momenat, na isti nacin sam ja postupio. U potrazi da nesto bude zanimljivo i kreativno ovaj projekat je proistekao iz te teznje.
@@ -81,4 +84,4 @@ Kako koristeci Airtable serverless arhitekturu mozemo da resimo veliki problem c
 
 Za dozivljaj svakog sajta potrebne su animacije, na ovom projektu se nije stedelo sa njima pa evo da prilike da predstvim neke od njih, ne mogu da ulazim u detelje kako je odradjeno, jer bih trebao da pisem knjigu a ne jednu kratku stranu na githubu
 
-![alt text](https://i.ibb.co/4ZpWqZN/serveragain-1.png 'asot-1000')
+![alt text](https://i.ibb.co/ygfhC6c/framer-1.png 'asot-1000')
