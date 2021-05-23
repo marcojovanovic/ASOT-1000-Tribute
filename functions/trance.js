@@ -6,8 +6,6 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .table('asottrance');
 
 exports.handler = async (event, context, cb) => {
-
-
   try {
     const { records } = await airtable.list();
 
