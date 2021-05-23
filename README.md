@@ -61,7 +61,7 @@
 
 
 
-![alt text](https://ibb.co/3NWJkdL "asot-1000")
+![alt text](https://i.ibb.co/r6MWv01/raycast-untitled.png "asot-1000")
 
 > Odmah da naglasim da projekat nije preuzet sa nekog YouTube tutorijala ili kursa. 
   Obicno se na nekog ko konkurise za praksu ili junior poslove donekle sumnja da je maznuo projekat sa nekog kursa i postavio kao svoj. Kandidat za posao slusa savet sa YouTuba i odradi copy/paste nekoliko projekata i spreman je za posao !  
